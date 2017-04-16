@@ -3,7 +3,7 @@
 var clientFromConnectionString = require('azure-iot-device-amqp').clientFromConnectionString;
 var Message = require('azure-iot-device').Message;
 
-var connStr = 'HostName=WilzIoTHub.azure-devices.net;DeviceId=nodejsdevice;SharedAccessKey=pCcnUasTURIaelJLa+58gL39yN+T3DrQwSxEe4W85DE=';
+var connStr = 'HostName=WOS-IoT-Hub.azure-devices.net;DeviceId=wos-iot-device1;SharedAccessKey=hEMKTehCS3bYgLHrsIwxxsn8Doy0vZHZ+cJcDLDTBdA=';
 
 var client = clientFromConnectionString(connStr);
 
