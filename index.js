@@ -66,7 +66,7 @@ var connectCallback = function (err) {
 
             console.log("Telemetry sent: " + message.getData());
             client.sendEvent(message, printResultFor('send'));
-        }, 2000);
+        }, 5000);
     }
 };
 
