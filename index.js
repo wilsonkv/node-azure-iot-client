@@ -38,8 +38,6 @@ var connectCallback = function (err) {
         setInterval(function () {
             i++;
 
-
-
             var cel = Math.floor(Math.random() * (32 - 20 + 1) + 20);
             var fahr = ((cel * 9) / 5) + 32;
             var humid = Math.floor(Math.random() * (85 - 72 + 1) + 72);
@@ -48,7 +46,6 @@ var connectCallback = function (err) {
             var payload = JSON.stringify({
                 deviceId: 111,
                 location: 'Cochin',
-                // celsius & fahrenheit are averages taken from both sensors on the shield
                 celsius: cel,
                 fahrenheit: fahr,
                 relativeHumidity: humid,
@@ -57,9 +54,6 @@ var connectCallback = function (err) {
                 feet: (meters/0.3048)
             });
 
-            //            var data = JSON.stringify({
-            //                numberOfCycles: Math.floor(Math.random()*(max-min+1)+min)
-            //            });
             var message = new Message(payload);
             // Use Routing
             message.properties.add('severity', 'high');
